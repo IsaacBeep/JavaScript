@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> function 
+        funcao1() 
+            {
+                var X;
+                var r=confirm("Escolha um valor");
+                if (r == true) {X = "Você escolheu OK!";}
+                else {X = "Você escolheu Cancelar!";}
+                document.getElementById("demo").innerHTML=X;
+            }
+    </script>
+</head>
+<body>
+    <p>Clique no botao para exibir a caixa de consfirmação</p>
+    <button onclick="funcao1()">Clique aqui</button>
+    <p id="demo"></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> function 
+        smyFunction() 
+            {
+                var X;
+                var idade=prompt("Digite sua idade: ");
+                if (idade != null) {
+                    X = "idade: " + idade + " anos";
+                    document.getElementById("demo").innerHTML=X;
+                }
+            }
+    </script>
+</head>
+<body>
+    <p>Clique aqui para exibir</p>
+    <button onclick="smyFunction()">Clique aqui</button>
+    <p id="demo"></p>
+    
+</body>
+</html>
