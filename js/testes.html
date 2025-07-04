@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincel com o Mouse</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            cursor: crosshair;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="drawingCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('drawingCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Ajusta o tamanho do canvas para ocupar toda a janela
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let isDrawing = false;
+
+        canvas.addEventListener('mousedown', () => {
+            isDrawing = true;
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+            ctx.beginPath(); // Reseta o caminho para evitar linhas conectadas
+        });
+
+        canvas.addEventListener('mousemove', (event) => {
+            if (!isDrawing) return;
+
+            ctx.lineWidth = 5; // Espessura do pincel
+            ctx.lineCap = 'round'; // Formato arredondado nas extremidades
+            ctx.strokeStyle = 'black'; // Cor do pincel
+
+            ctx.lineTo(event.clientX, event.clientY);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(event.clientX, event.clientY);
+        });
+
+        // Ajusta o canvas ao redimensionar a janela
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
