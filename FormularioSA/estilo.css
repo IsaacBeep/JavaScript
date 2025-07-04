@@ -1,0 +1,39 @@
+body{
+    background-color: #2c5686;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+h3{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+label{
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+td{
+    color: #ffffff;
+}
+
+fieldset{
+
+    background-color: #3d86d3;
+    border: 2px solid #ffffff;
+    padding: 20px;
+   
+}
+form{
+    background-color: #2c5686;
+    padding: 500px;
+   
+}
