@@ -6,7 +6,7 @@
     <title>Saude</title>
     <!-- Escreva o CSS ou UTILIZE BOOTSTRAP NO CODIGO ABAIXO-->
     <link rel="stylesheet" href="estilo.css">
-    <script></script>
+    <script src="formulario.js"></script>
 </head>
 <body>
     <form action="#" id="Formulario" onsubmit="return valida()" method="post">
@@ -62,7 +62,7 @@
                     </td>
 
                     <td>
-                        <input  type="text" required onkeypress="mascara(this, cartaosus)" name="cartaosus" maxlength="14">
+                        <input  type="text" required onkeypress="mascara(this, cartaosus)" maxlength="10">
                     </td>
                 </tr>
 
@@ -72,7 +72,7 @@
                     </td>
 
                     <td>
-                        <input  type="text" required onkeypress="mascara(this, data)" name="anodiabetes" maxlength="14">
+                        <input  type="text" required onkeypress="mascara(this, data)" maxlength="10">
                     </td>
                 </tr>
 
@@ -83,7 +83,7 @@
 
                     <td>
                         <label for="">
-                            <input  type="text" required onkeypress="mascara(this, data)" name="datanascimento" maxlength="10"> (DD:MM:AAAA)
+                            <input  type="text" required onkeypress="mascara(this, data)" maxlength="10"> (DD:MM:AAAA)
                         </label>
                     </td>
                     <td>
@@ -111,7 +111,7 @@
                         </td>
     
                         <td>
-                            <input type="text" required onkeypress="mascara(this, RGeCPF)" name="RGeCPF" maxlength="14">
+                            <input type="text" required onkeypress="mascara(this, RGeCPF)" maxlength="14">
                         </td>
 
                         <td align="right"> SSP

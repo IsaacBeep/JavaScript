@@ -22,9 +22,32 @@ function telefone(variavel){
 //RGeCPF
 function RGeCPF(variavel){
     variavel=variavel.replace(/\D/g,"")//remove caracteres não numericas
-    variavel=variavel.replace(/(\d{3})(\d)$/,"$1.$2") //adiciona o hifem entre o quarto e o quinto digito
+    variavel=variavel.replace(/(\d{3})(\d)/,"$1.$2") //adiciona o ponto entre o terceiro e o quarto digito
+    variavel=variavel.replace(/(\d{3})(\d)/,"$1.$2") //adiciona o ponto entre o sexto e o setimo digito
+    variavel=variavel.replace(/(\d{3})(\d{1,2})$/,"$1-$2") //adiciona o hifem entre o quarto e o quinto digito
     return variavel
 }
 
+//CEP
+function cep(variavel){
+    variavel=variavel.replace(/\D/g,"") //remove caracteres não numericas
+    variavel=variavel.replace(/(\d{5})(\d)/,"$1-$2") //adiciona o hifem entre o quinto e o sexto digito
+    return variavel
+}
+
+//data
+function data(variavel){
+    variavel=variavel.replace(/\D/g,"") //remove caracteres não numericas
+    variavel=variavel.replace(/(\d{2})(\d)/,"$1/$2") //adiciona a barra entre o segundo e o terceiro digito
+    variavel=variavel.replace(/(\d{2})(\d)/,"$1/$2") //adiciona a barra entre o quarto e o quinto digito
+    return variavel
+}
+
+//cartao sus
+function cartaosus(variavel){
+    variavel=variavel.replace(/\D/g,"") //remove caracteres não numericas
+    variavel=variavel.replace(/(\d{6})(\d)/,"$1-$2") //adiciona o ponto entre o terceiro e o quarto digito
+    return variavel
+}
 
 
