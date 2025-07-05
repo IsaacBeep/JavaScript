@@ -1,39 +1,35 @@
+
+
 body{
-    background-color: #2c5686;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: Arial, sans-serif;
-    padding: 20px;
-}
-
-h2 {
-    color: #ffffff;
+    font-size: 14px;
+    padding: 40px;
     text-align: center;
 }
 
-h3{
-    color: #ffffff;
-    text-align: center;
-    margin-top: 20px;
-}
-
-label{
-    color: #ffffff;
-    display: block;
-    margin-bottom: 10px;
-}
-
-td{
-    color: #ffffff;
-}
-
-fieldset{
-
-    background-color: #3d86d3;
-    border: 2px solid #ffffff;
-    padding: 20px;
-   
-}
 form{
-    background-color: #2c5686;
-    padding: 500px;
-   
+    background-color: rgb(235, 235, 235);
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+input[type="submit"]{
+    background-color: rgb(59, 142, 208);
+    color: rgb(255, 255, 255);
+    border-color:  rgb(59, 142, 208);
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+input[type="button"]{
+    background-color: rgb(59, 142, 208);
+    color: rgb(255, 255, 255);
+    border-color: rgb(59, 142, 208);
+    cursor: pointer;
+    display: inline-block;
+    
 }

@@ -13,7 +13,7 @@
         <!-- DADOS PESSOAIS-->
          <fieldset>
             <div>
-                <h3>INSERIR DADOS DOS PACIENTES</h3>
+                <h3>INSERIR DADOS DO CLIENTE</h3>
             </div>
 
             <div id="linha">
@@ -32,99 +32,8 @@
                     </td>
 
                     <td>
-                        <input class="tamanho" type="text" name="nome" size="15" required>
+                        <input class="tamanho" type="text" required onkeypress="mascara(this, nome)" size="20">
                     </td>
-                </tr>
-
-                <tr> <!-- POSTO DE SAUDE -->
-                    <td align="right">
-                        <label for="postosaude">Posto de Saúde:</label>
-                    </td>
-
-                    <td>
-                        <input class="tamanho2" type="text" name="posto" size="15" maxlength="15">
-                    </td>
-                </tr>
-
-                <tr> <!-- DIABETE -->
-                    <td align="right">
-                        <label for="tipodiabete">Tipo Diabetes:</label>
-                    </td>
-
-                    <td>
-                        <input class="tamanho" type="text" name="diabete" size="15" required>
-                    </td>
-                </tr>
-
-                <tr> <!-- CARTÃO DO SUS -->
-                    <td align="right">
-                        <label for="cartaosus">Cartão do SUS:</label>
-                    </td>
-
-                    <td>
-                        <input  type="text" required onkeypress="mascara(this, cartaosus)" maxlength="10">
-                    </td>
-                </tr>
-
-                <tr> <!-- ANO INICIO DA DIABETES -->
-                    <td align="right">
-                        <label for="anodiabetes">Ano de Inicio da Diabetes:</label>
-                    </td>
-
-                    <td>
-                        <input  type="text" required onkeypress="mascara(this, data)" maxlength="10">
-                    </td>
-                </tr>
-
-                <tr> <!-- DATA DE NASCIMENTO -->
-                    <td align="right">
-                        <label for="dt">Ano de Nascimento:</label>
-                    </td>
-
-                    <td>
-                        <label for="">
-                            <input  type="text" required onkeypress="mascara(this, data)" maxlength="10"> (DD:MM:AAAA)
-                        </label>
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-
-                <tr>
-                    <tr> <!-- SEXO -->
-                        <td align="right">
-                            <label for="sexo">Sexo:</label>
-                        </td>
-    
-                        <td>
-                            <input type="radio" value="" name="sexo" required> Masc
-                            <input type="radio" value="" name="sexo" required> Fem
-                        </td>
-                    </tr>
-                    
-                </tr>
-
-                <tr>
-                    <tr> <!-- RG e CPF -->
-                        <td align="right">
-                            <label for="RGeCPF">RG:</label>
-                        </td>
-    
-                        <td>
-                            <input type="text" required onkeypress="mascara(this, RGeCPF)" maxlength="14">
-                        </td>
-
-                        <td align="right"> SSP
-                            <select name="estado" id="estado" class="estados">
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="SP">Sao Paulo</option>
-                                <option value="PR">Parana</option>
-                                <option value="PB">Paraiba</option>
-                            </select>
-                        </td>
-
-                    </tr>
-                    
                 </tr>
 
                 <tr>
@@ -141,15 +50,30 @@
                 </tr>
 
                 <tr>
-                    <tr> <!-- PROFISSÃO -->
+                    <tr> <!-- EMAIL -->
                         <td align="right">
-                            <label for="profissao">Profissão:</label>
+                            <label for="email">Email:</label>
                         </td>
     
                         <td>
-                            <input class="tamanho" type="text" name="profissao" required>
+                            <input type="email" required onkeypress="mascara(this, email)" >
                         </td>
                     </tr>
+                    
+                </tr>
+
+                <tr> <!-- DATA DE NASCIMENTO -->
+                    <td align="right">
+                        <label for="dt">Ano de Nascimento:</label>
+                    </td>
+
+                    <td>
+                        <label for="">
+                            <input  type="text" required onkeypress="mascara(this, data)" maxlength="10"> (DD:MM:AAAA)
+                        </label>
+                    </td>
+                    <td>
+                    </td>
                 </tr>
 
                 <tr>

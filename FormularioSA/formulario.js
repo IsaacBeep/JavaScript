@@ -19,15 +19,6 @@ function telefone(variavel){
     return variavel
 }
 
-//RGeCPF
-function RGeCPF(variavel){
-    variavel=variavel.replace(/\D/g,"")//remove caracteres não numericas
-    variavel=variavel.replace(/(\d{3})(\d)/,"$1.$2") //adiciona o ponto entre o terceiro e o quarto digito
-    variavel=variavel.replace(/(\d{3})(\d)/,"$1.$2") //adiciona o ponto entre o sexto e o setimo digito
-    variavel=variavel.replace(/(\d{3})(\d{1,2})$/,"$1-$2") //adiciona o hifem entre o quarto e o quinto digito
-    return variavel
-}
-
 //CEP
 function cep(variavel){
     variavel=variavel.replace(/\D/g,"") //remove caracteres não numericas
@@ -43,12 +34,9 @@ function data(variavel){
     return variavel
 }
 
-//cartao sus
-function cartaosus(variavel){
-    variavel=variavel.replace(/\D/g,"") //remove caracteres não numericas
-    variavel=variavel.replace(/(\d{6})(\d)/,"$1-$2") //adiciona o ponto entre o terceiro e o quarto digito
-    return variavel
+//NOME
+function nome(variavel) {
+    variavel = variavel.replace(/[^a-zA-ZÀ-ÿ\s]/g, "");
+    variavel = variavel.replace(/\s+/g, " ").trim();
+    return variavel;
 }
-
-
-
